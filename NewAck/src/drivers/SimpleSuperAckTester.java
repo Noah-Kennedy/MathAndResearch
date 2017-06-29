@@ -4,7 +4,7 @@ import objects.SimpleAck;
 
 public class SimpleSuperAckTester {
 	public static void main(String[] args){
-		int x = 268417019 * 3 / 4;
+		int x = Integer.MAX_VALUE / 2;
 		for(int m = 0; m <= 10; m++){
 			//HyperAck h = new HyperAck(m + 1, x);
 			SimpleAck a = new SimpleAck(m + 1, x);
@@ -22,22 +22,22 @@ public class SimpleSuperAckTester {
 				System.out.print(", Old Val: " + a0);
 				System.out.print(", Old Time: " + t0);*/
 
-				try{
+				//try{
 				long t1 = /*System.currentTimeMillis()*/System.nanoTime();
 				int a1 = a.getSuperAck(m, n);
 				t1 = System.nanoTime() - t1;
 				System.out.print(", New Val: " + a1);
 				System.out.print(", New Time: " + t1);
 				//System.out.print(", Super Saves: " + a.saves);
-				}catch(StackOverflowError e){
+				/*}catch(StackOverflowError e){
 					System.out.println(" ERROR ");
 					/*long t1 = System.currentTimeMillis();
 					int a1 = a.ultraAck(m, n);
 					t1 = System.currentTimeMillis() - t1;
 					System.out.print(", New Val: " + a1);
-					System.out.print(", New Time: " + t1);*/
+					System.out.print(", New Time: " + t1);
 					break;
-				}
+				}*/
 				
 				
 				/*long t2 = System.currentTimeMillis();
