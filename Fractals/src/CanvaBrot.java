@@ -3,12 +3,15 @@ import java.awt.Point;
 
 public class CanvaBrot {
 	public static void main(String[] args) throws InterruptedException{
-	final int width = 1920 * 4, height = 1080 * 4, max = 10000;
+	final int width = 1920, height = 1080;
     final Canvas image = new Canvas("CanvaBrot");
     image.setSize(width, height);
     image.setVisible(true);
     image.setInkColor(Color.BLACK);
-    System.out.println(Thread.activeCount());
+	for(int i = 0; i < 10000000; i++) {
+	System.out.println(i);
+	image.erase();
+	int max = i;
     for (int row = 0; row < height; row++) {
     	final int ra = row;
     	Thread t = new Thread(() -> {
@@ -39,5 +42,6 @@ public class CanvaBrot {
     	t.start();
     }
 
+	}
 	}
 }
