@@ -20,6 +20,8 @@ import org.opencv.core.Scalar;
 import org.opencv.core.Size;
 import org.opencv.imgproc.Imgproc;
 
+import tests.Utilities;
+
 public class FearVis {
 	static double width;
 	static double height;

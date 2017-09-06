@@ -5,7 +5,8 @@ import javax.imageio.ImageIO;
 
 public class MandelbrotColor {
     public static void main(String[] args) throws Exception {
-        int width = 1920, height = 1080, max = 1000;
+    	int k = 32;
+        int width = 1920 * k, height = 1080 * k, max = 1000;
         //System.out.println(Integer.MAX_VALUE);
         //System.out.println(width * height);
         BufferedImage image = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
@@ -32,7 +33,7 @@ public class MandelbrotColor {
                 else image.setRGB(col, row, black);
             }
         }
-
-        ImageIO.write(image, "png", new File("61440x34560_mandelbrot.png"));
+        ImageIO.write(image, "png", new File(width + "x" + height + "_" + "mandelbrot.png"));
+        Utilities.displayImage(image);
     }
 }
