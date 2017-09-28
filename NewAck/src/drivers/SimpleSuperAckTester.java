@@ -1,15 +1,17 @@
 package drivers;
 
+import objects.HyperAck;
 import objects.SimpleAck;
 
 public class SimpleSuperAckTester {
 	public static void main(String[] args){
-		int x = Integer.MAX_VALUE / 2;
-		for(int m = 0; m <= 10; m++){
+		int x = Integer.MAX_VALUE / 4;
+		//x = 1000;
+		for(int m = 0; m <= 3; m++){
 			//HyperAck h = new HyperAck(m + 1, x);
 			SimpleAck a = new SimpleAck(m + 1, x);
 			
-			for(int n = 0; n <= 30; n++){
+			for(int n = 0; n <= 1000; n++){
 				//h.saves = 0;
 				//a.saves = 0;
 				//a.strangeSaves = 0;
@@ -40,11 +42,11 @@ public class SimpleSuperAckTester {
 				}*/
 				
 				
-				/*long t2 = System.currentTimeMillis();
+				long t2 = System.currentTimeMillis();
 				int a2 = HyperAck.getHypAck(m, n);
 				t2 = System.currentTimeMillis() - t2;
 				System.out.print(", Hyp Val: " +  a2);
-				System.out.print(", Hyp Time: " + t2);*/
+				System.out.print(", Hyp Time: " + t2);
 				
 				/*long t3 = System.currentTimeMillis();
 				int a3 = h.ultraAck(m, n);
