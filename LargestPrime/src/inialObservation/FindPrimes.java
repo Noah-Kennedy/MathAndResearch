@@ -1,6 +1,5 @@
 package inialObservation;
 
-import javax.swing.JOptionPane;
 
 public class FindPrimes {
 	
@@ -21,7 +20,7 @@ public class FindPrimes {
 	}
 	
 	public static void main(String[] args) {
-		int upto = Integer.MAX_VALUE;
+		int upto = 50;
 		simplePrime(upto);
 	}
 }
