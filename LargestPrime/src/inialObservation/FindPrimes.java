@@ -27,7 +27,8 @@ public class FindPrimes {
 	}
 	
 	public static void main(String[] args) {
-		int upto = Integer.parseInt(JOptionPane.showInputDialog("Enter a number to go upto"));
+		//int upto = Integer.parseInt(JOptionPane.showInputDialog("Enter a number to go upto"));
+		int upto = Integer.MAX_VALUE;
 		simplePrimeUpto(upto);
 	}
 }
